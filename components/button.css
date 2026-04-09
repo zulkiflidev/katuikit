@@ -1,0 +1,111 @@
+/* ================================
+   katuikit — button.css
+   Pure CSS button components
+   https://github.com/katuikit
+================================ */
+
+/* --- CSS Variables --- */
+:root {
+  --katu-primary: #4f6f52;
+  --katu-secondary: #739072;
+  --katu-accent: #e8c84a;
+  --katu-danger: #c0392b;
+  --katu-text-light: #ffffff;
+  --katu-text-dark: #2c2c2c;
+  --katu-radius: 6px;
+  --katu-transition: 0.2s ease;
+}
+
+/* --- Base Button --- */
+.katu-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: var(--katu-radius);
+  cursor: pointer;
+  transition:
+    background-color var(--katu-transition),
+    border-color var(--katu-transition),
+    color var(--katu-transition),
+    opacity var(--katu-transition);
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* --- Primary --- */
+.katu-btn-primary {
+  background-color: var(--katu-primary);
+  color: var(--katu-text-light);
+  border-color: var(--katu-primary);
+}
+
+.katu-btn-primary:hover {
+  background-color: #3d5740;
+  border-color: #3d5740;
+}
+
+/* --- Secondary --- */
+.katu-btn-secondary {
+  background-color: var(--katu-secondary);
+  color: var(--katu-text-light);
+  border-color: var(--katu-secondary);
+}
+
+.katu-btn-secondary:hover {
+  background-color: #5a7259;
+  border-color: #5a7259;
+}
+
+/* --- Outline --- */
+.katu-btn-outline {
+  background-color: transparent;
+  color: var(--katu-primary);
+  border-color: var(--katu-primary);
+}
+
+.katu-btn-outline:hover {
+  background-color: var(--katu-primary);
+  color: var(--katu-text-light);
+}
+
+/* --- Danger --- */
+.katu-btn-danger {
+  background-color: var(--katu-danger);
+  color: var(--katu-text-light);
+  border-color: var(--katu-danger);
+}
+
+.katu-btn-danger:hover {
+  background-color: #a93226;
+  border-color: #a93226;
+}
+
+/* --- Disabled --- */
+.katu-btn:disabled,
+.katu-btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --- Sizes --- */
+.katu-btn-sm {
+  padding: 6px 14px;
+  font-size: 12px;
+}
+
+.katu-btn-lg {
+  padding: 14px 30px;
+  font-size: 16px;
+}
+
+/* --- Full Width --- */
+.katu-btn-block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
