@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>katuikit — Badge</title>
+    <link rel="stylesheet" href="../components/badge.css" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: #f5f5f0;
+        color: #2c2c2c;
+        min-height: 100vh;
+      }
+
+      /* --- Navbar --- */
+      nav {
+        background: #fff;
+        border-bottom: 1px solid #e0e0da;
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        height: 52px;
+      }
+
+      nav .logo {
+        font-weight: 700;
+        font-size: 16px;
+        color: #4f6f52;
+        text-decoration: none;
+        margin-right: 16px;
+      }
+
+      nav a {
+        font-size: 14px;
+        color: #888;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        color: #4f6f52;
+      }
+      nav a.active {
+        color: #4f6f52;
+        font-weight: 600;
+        border-bottom: 2px solid #4f6f52;
+        padding-bottom: 2px;
+      }
+
+      /* --- Layout --- */
+      .container {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+
+      .page-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .page-desc {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 40px;
+      }
+
+      /* --- Section --- */
+      .section {
+        margin-bottom: 40px;
+      }
+
+      .section-title {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #aaa;
+        margin-bottom: 14px;
+      }
+
+      .group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+      }
+
+      /* --- Code block --- */
+      .code-block {
+        background: #2c2c2c;
+        color: #e8e8e8;
+        font-family: monospace;
+        font-size: 13px;
+        padding: 16px 20px;
+        border-radius: 8px;
+        margin-top: 14px;
+        overflow-x: auto;
+        line-height: 1.6;
+      }
+
+      hr {
+        border: none;
+        border-top: 1px solid #e0e0da;
+        margin: 36px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <a href="index.html" class="logo">🪵 katuikit</a>
+      <a href="button.html">Button</a>
+      <a href="badge.html" class="active">Badge</a>
+      <a href="alert.html">Alert</a>
+      <a href="card.html">Card</a>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+      <h1 class="page-title">Badge</h1>
+      <p class="page-desc">
+        Small labels to highlight status, category, or count. Pure CSS, no
+        JavaScript needed.
+      </p>
+
+      <!-- Solid -->
+      <div class="section">
+        <div class="section-title">Solid</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-primary">Primary</span>
+          <span class="katu-badge katu-badge-secondary">Secondary</span>
+          <span class="katu-badge katu-badge-accent">Accent</span>
+          <span class="katu-badge katu-badge-danger">Danger</span>
+          <span class="katu-badge katu-badge-warning">Warning</span>
+          <span class="katu-badge katu-badge-info">Info</span>
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge katu-badge-primary"&gt;Primary&lt;/span&gt;
+          &lt;span class="katu-badge katu-badge-danger"&gt;Danger&lt;/span&gt;
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Outline -->
+      <div class="section">
+        <div class="section-title">Outline</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-outline-primary">Primary</span>
+          <span class="katu-badge katu-badge-outline-danger">Danger</span>
+          <span class="katu-badge katu-badge-outline-warning">Warning</span>
+          <span class="katu-badge katu-badge-outline-info">Info</span>
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge
+          katu-badge-outline-primary"&gt;Primary&lt;/span&gt;
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Soft -->
+      <div class="section">
+        <div class="section-title">Soft / Muted</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-soft-primary">Primary</span>
+          <span class="katu-badge katu-badge-soft-danger">Danger</span>
+          <span class="katu-badge katu-badge-soft-warning">Warning</span>
+          <span class="katu-badge katu-badge-soft-info">Info</span>
+          <span class="katu-badge katu-badge-soft-accent">Accent</span>
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge
+          katu-badge-soft-primary"&gt;Primary&lt;/span&gt;
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Sizes -->
+      <div class="section">
+        <div class="section-title">Sizes</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-primary katu-badge-sm">Small</span>
+          <span class="katu-badge katu-badge-primary">Default</span>
+          <span class="katu-badge katu-badge-primary katu-badge-lg">Large</span>
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge katu-badge-primary
+          katu-badge-sm"&gt;Small&lt;/span&gt; &lt;span class="katu-badge
+          katu-badge-primary"&gt;Default&lt;/span&gt; &lt;span class="katu-badge
+          katu-badge-primary katu-badge-lg"&gt;Large&lt;/span&gt;
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Square -->
+      <div class="section">
+        <div class="section-title">Square (non-pill)</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-primary katu-badge-square"
+            >Primary</span
+          >
+          <span class="katu-badge katu-badge-soft-danger katu-badge-square"
+            >Danger</span
+          >
+          <span class="katu-badge katu-badge-outline-info katu-badge-square"
+            >Info</span
+          >
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge katu-badge-primary
+          katu-badge-square"&gt;Primary&lt;/span&gt;
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Dot -->
+      <div class="section">
+        <div class="section-title">Dot Indicator</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-dot katu-badge-primary"></span>
+          <span class="katu-badge katu-badge-dot katu-badge-danger"></span>
+          <span class="katu-badge katu-badge-dot katu-badge-warning"></span>
+          <span class="katu-badge katu-badge-dot katu-badge-info"></span>
+          <span class="katu-badge katu-badge-dot katu-badge-accent"></span>
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge katu-badge-dot
+          katu-badge-danger"&gt;&lt;/span&gt;
+        </div>
+      </div>
+
+      <hr />
+
+      <!-- Count -->
+      <div class="section">
+        <div class="section-title">Count / Number</div>
+        <div class="group">
+          <span class="katu-badge katu-badge-count katu-badge-primary">1</span>
+          <span class="katu-badge katu-badge-count katu-badge-danger">9</span>
+          <span class="katu-badge katu-badge-count katu-badge-warning">12</span>
+          <span class="katu-badge katu-badge-count katu-badge-info">99+</span>
+        </div>
+        <div class="code-block">
+          &lt;span class="katu-badge katu-badge-count
+          katu-badge-danger"&gt;9&lt;/span&gt;
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
